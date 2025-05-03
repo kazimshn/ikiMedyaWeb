@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}İki Medya - Ana Sayfa{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="relative bg-gradient-to-r from-primary to-secondary h-screen flex items-center">
+    <!-- Background Image -->
+    <div class="absolute inset-0">
+        <img src="{% static 'images/cover.png' %}" alt="Cover" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-secondary/90"></div>
+    </div>
+
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-3xl">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 animate-fadeIn">
+                Dijital Dünyada İz Bırakan Çözümler
+            </h1>
+            <p class="text-xl md:text-2xl text-white/90 mb-8 animate-fadeIn" style="animation-delay: 0.2s;">
+                Promosyon, reklam, dijital çözümler ve yazılım hizmetleriyle işinizi bir adım öne taşıyoruz.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 animate-fadeIn" style="animation-delay: 0.4s;">
+                <a href="{% url 'services' %}"
+                    class="inline-block bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200">
+                    Hizmetlerimiz
+                </a>
+                <a href="{% url 'contact' %}"
+                    class="inline-block bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
+                    Bize Ulaşın
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Hizmetlerimiz</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Promosyon -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-200">
+                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                    <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Promosyon</h3>
+                <p class="text-gray-600">Markanızı öne çıkaracak yaratıcı promosyon çözümleri.</p>
+            </div>
+
+            <!-- Reklam -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-200">
+                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                    <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Reklam</h3>
+                <p class="text-gray-600">Etkili reklam stratejileri ile hedef kitlenize ulaşın.</p>
+            </div>
+
+            <!-- Dijital Çözümler -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-200">
+                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                    <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                        </path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Dijital Çözümler</h3>
+                <p class="text-gray-600">Modern dijital çözümlerle işinizi geleceğe taşıyın.</p>
+            </div>
+
+            <!-- Yazılım -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-200">
+                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                    <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Yazılım Geliştirme</h3>
+                <p class="text-gray-600">Özel yazılım çözümleri ile iş süreçlerinizi optimize edin.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Us Section -->
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Neden Biz?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="text-center">
+                <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Hızlı ve Etkili</h3>
+                <p class="text-gray-600">Projelerinizi hızlı ve etkili bir şekilde hayata geçiriyoruz.</p>
+            </div>
+
+            <div class="text-center">
+                <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                        </path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Güvenilir</h3>
+                <p class="text-gray-600">Güvenilir ve şeffaf iş süreçleri ile çalışıyoruz.</p>
+            </div>
+
+            <div class="text-center">
+                <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4">
+                        </path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Profesyonel</h3>
+                <p class="text-gray-600">Profesyonel ekibimizle kaliteli hizmet sunuyoruz.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
